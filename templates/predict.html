@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction Page</title>
+</head>
+<body>
+<div class="container">
+    <h1>House Price Prediction Page</h1>
+</div>
+<form action="result">
+    <div class="row">
+        <div class="col">
+            <div class="icon">
+                <img src={% static 'income.png' %} alt="income.pn">
+                <p>Avg Area Income</p>
+            </div>
+            <input type="text" name="n1"  required>
+        </div>
+
+        <div class="col">
+            <div class="icon">
+                <img src={% static 'home.png' %} alt="income.pn">
+                <p>AvgArea House Age</p>
+            </div>
+            <input type="text" name="n2" required>
+        </div>
+
+        <div class="col">
+            <div class="icon">
+                <img src={% static 'room.png' %} alt="income.pn">
+                <p>Avg Area Number of Rooms</p>
+            </div>
+            <input type="text" name="n3">
+        </div>
+
+        <div class="col">
+            <div class="icon">
+                <img src={% static 'sleeping.png' %} alt="income.pn">
+                <p>Avg Area Number of Bedrooms</p>
+            </div>
+            <input type="text" name="n4"  required>
+        </div>
+
+        <div class="col">
+            <div class="icon">
+                <img src={% static 'people.png' %} alt="income.pn">
+                <p>Avg Area Population</p>
+            </div>
+            <input type="text" name="n5"  required>
+        </div>
+
+
+    </div>
+
+    <div class="btn">
+        <input type="submit" value="Predict" style="text-transform:uppercase">
+    </div>
+
+</form>
+
+<div class="prediction">
+    <p>{{result2}}</p>
+</div>
+<form action="/">
+    <div class="btn">
+        <input type="submit" value="back to Home" style="text-transform:uppercase">
+    </div>
+</form>
+<form action="result">
+
+</form>
+
+
+</body>
+</html>
